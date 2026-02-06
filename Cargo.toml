@@ -1,0 +1,21 @@
+[package]
+name = "rust-restapi"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { version = "1.0", features = ["full"] }
+axum = { version = "0.7", features = ["macros"] }
+axum-extra = { version = "0.9", features = ["cookie"] } # Cookie yönetimi için
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+dotenvy = "0.15"
+sea-orm = { version = "0.12", features = ["sqlx-postgres", "runtime-tokio-rustls", "macros"] }
+jsonwebtoken = "9.2"
+bcrypt = "0.15"
+tower = { version = "0.4", features = ["util"] }
+tower-http = { version = "0.5", features = ["cors"] }
+thiserror = "1.0"
+validator = { version = "0.16", features = ["derive"] }
+async-trait = "0.1.89"
+chrono = "0.4.43"
